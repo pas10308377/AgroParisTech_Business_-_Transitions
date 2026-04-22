@@ -149,7 +149,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.12fr 0.88fr;
       gap: 42px;
       align-items: center;
     }
@@ -182,25 +182,24 @@
     .hero-logo-wrap {
       display: flex;
       align-items: center;
-      gap: 18px;
-      margin-bottom: 22px;
+      gap: 20px;
+      margin-bottom: 24px;
     }
 
     .hero-logo {
-      width: 86px;
-      height: 86px;
+      width: 120px;
+      height: 120px;
       object-fit: contain;
-      border-radius: 22px;
-      padding: 10px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 16px 34px rgba(0,0,0,0.10);
+      border-radius: 26px;
+      padding: 14px;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid rgba(255,255,255,0.95);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.14);
     }
 
     .hero-brand {
       font-weight: 900;
-      font-size: 1rem;
+      font-size: 1.05rem;
       line-height: 1.2;
       letter-spacing: 0.02em;
     }
@@ -285,10 +284,10 @@
     .hero-panel {
       position: relative;
       overflow: hidden;
-      padding: 24px;
-      border-radius: 28px;
-      background: rgba(255,255,255,0.09);
-      border: 1px solid rgba(255,255,255,0.13);
+      padding: 30px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+      border: 1px solid rgba(255,255,255,0.14);
       backdrop-filter: blur(16px);
       box-shadow: 0 24px 70px rgba(0,0,0,0.12);
     }
@@ -296,10 +295,10 @@
     .hero-panel::after {
       content: "";
       position: absolute;
-      width: 220px;
-      height: 220px;
-      right: -80px;
-      top: -80px;
+      width: 240px;
+      height: 240px;
+      right: -90px;
+      top: -90px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
     }
@@ -318,41 +317,51 @@
     }
 
     .panel-title {
-      margin: 0 0 16px;
+      margin: 0 0 12px;
       font-family: "Manrope", sans-serif;
-      font-size: 1.8rem;
+      font-size: 1.95rem;
       line-height: 1.08;
     }
 
     .panel-text {
-      margin: 0 0 18px;
+      margin: 0 0 22px;
       color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+    }
+
+    .hero-panel-footer {
+      margin-top: 16px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.84);
+      font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(2, minmax(120px, 1fr));
       gap: 14px;
-      margin-top: 20px;
+      margin-top: 18px;
     }
 
     .metric {
-      padding: 16px;
+      padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
     .metric strong {
       display: block;
       margin-bottom: 6px;
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       font-weight: 900;
     }
 
     .metric span {
       font-size: 0.92rem;
-      color: rgba(255,255,255,0.82);
+      color: rgba(255,255,255,0.84);
       font-weight: 600;
     }
 
@@ -485,7 +494,7 @@
     .grid { grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); }
     .contact-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .poles-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .activities-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .activities-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
     .card,
     .mini-stat,
@@ -520,6 +529,16 @@
       inset: 0 0 auto 0;
       height: 5px;
       background: linear-gradient(90deg, var(--green-700), var(--blue-700));
+    }
+
+    .activities-grid .card:first-child {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(0,160,106,0.08), rgba(29,55,128,0.08), rgba(255,255,255,0.96));
+    }
+
+    .coming-soon-card {
+      background: linear-gradient(135deg, rgba(22,42,89,0.06), rgba(0,160,106,0.06), rgba(255,255,255,0.98));
+      border-style: dashed;
     }
 
     .card-icon,
@@ -747,8 +766,13 @@
     @media (max-width: 980px) {
       .hero-grid,
       .grid-2,
-      .flagship-shell {
+      .flagship-shell,
+      .activities-grid {
         grid-template-columns: 1fr;
+      }
+
+      .activities-grid .card:first-child {
+        grid-column: span 1;
       }
 
       header {
@@ -793,12 +817,12 @@
       }
 
       .hero-logo-wrap {
-        align-items: flex-start;
+        align-items: center;
       }
 
       .hero-logo {
-        width: 72px;
-        height: 72px;
+        width: 96px;
+        height: 96px;
       }
     }
 
@@ -836,7 +860,6 @@
         <div class="hero-kicker">Club étudiant • AgroParisTech</div>
 
         <div class="hero-logo-wrap">
-          <!-- Remplace le chemin ci-dessous par le chemin final de ton logo si besoin -->
           <img class="hero-logo" src="logo_APT_business&Transitions.png" alt="Logo AgroParisTech Business & Transitions" />
           <div class="hero-brand">
             AgroParisTech<br>
@@ -870,27 +893,31 @@
         <span class="panel-label">Projet signature</span>
         <h2 class="panel-title">Hackathon Youth for Bioeconomy</h2>
         <p class="panel-text">
-          Notre plus grand projet : un hackathon étudiant ambitieux pour faire émerger des solutions concrètes autour de la bioéconomie,
+          Le projet phare du club : un hackathon étudiant ambitieux pour faire émerger des solutions concrètes autour de la bioéconomie,
           de l’innovation et des transitions.
         </p>
 
         <div class="hero-metrics">
           <div class="metric">
-            <strong>1</strong>
-            <span>club à l’interface business & vivant</span>
+            <strong>24h</strong>
+            <span>d’innovation et de collaboration</span>
           </div>
           <div class="metric">
-            <strong>6+</strong>
-            <span>pôles structurants au sein de l’association</span>
+            <strong>50+</strong>
+            <span>participants visés</span>
           </div>
           <div class="metric">
-            <strong>10+</strong>
-            <span>formats d’activités et d’événements</span>
+            <strong>3</strong>
+            <span>grandes thématiques de défis</span>
           </div>
           <div class="metric">
-            <strong>1</strong>
-            <span>vision : former des étudiants engagés et ouverts</span>
+            <strong>5</strong>
+            <span>pôles actifs au lancement</span>
           </div>
+        </div>
+
+        <div class="hero-panel-footer">
+          Un projet structurant qui incarne l’ADN du club : ambition, interdisciplinarité, impact et ouverture vers l’extérieur.
         </div>
       </div>
     </div>
@@ -1020,7 +1047,7 @@
                 <span>grandes thématiques de défis</span>
               </div>
               <div class="flagship-stat">
-                <strong>100+</strong>
+                <strong>50+</strong>
                 <span>participants visés</span>
               </div>
               <div class="flagship-stat">
@@ -1066,6 +1093,14 @@
 
         <div class="activities-grid">
           <div class="card">
+            <div class="card-icon">💡</div>
+            <h3>Hackathons, concours & temps forts</h3>
+            <p>
+              Des formats emblématiques pour concevoir, challenger et défendre des idées à fort potentiel. Ces événements incarnent
+              l’ambition du club et donnent une dimension concrète, collective et visible à nos actions.
+            </p>
+          </div>
+          <div class="card">
             <div class="card-icon">🎤</div>
             <h3>Conférences</h3>
             <p>Interventions d’experts, d’alumni, de dirigeants ou d’acteurs engagés sur les grandes transformations économiques et environnementales.</p>
@@ -1076,23 +1111,18 @@
             <p>Formats pratiques sur le pitch, le business model, l’investissement, l’innovation, l’impact ou la structuration de projet.</p>
           </div>
           <div class="card">
-            <div class="card-icon">💡</div>
-            <h3>Hackathons & concours</h3>
-            <p>Des expériences collectives pour concevoir, challenger et défendre des idées concrètes à fort potentiel.</p>
-          </div>
-          <div class="card">
             <div class="card-icon">🏢</div>
             <h3>Visites</h3>
             <p>Découvertes de startups, d’entreprises et d’écosystèmes pour connecter les apprentissages au terrain.</p>
           </div>
           <div class="card">
             <div class="card-icon">🎓</div>
-            <h3>Mini-MOOC internes</h3>
-            <p>Contenus de formation accessibles pour acquérir des bases communes et monter en compétence au sein du club.</p>
+            <h3>Mini-formations</h3>
+            <p>Contenus accessibles pour acquérir des bases communes, structurer les connaissances et monter en compétence au sein du club.</p>
           </div>
           <div class="card">
             <div class="card-icon">🎙️</div>
-            <h3>Rencontres & podcasts</h3>
+            <h3>Rencontres & contenus</h3>
             <p>Formats inspirants pour donner la parole à des profils variés et rendre visibles des trajectoires professionnelles engagées.</p>
           </div>
         </div>
@@ -1139,7 +1169,7 @@
         <span class="eyebrow">Organisation</span>
         <h2>Les pôles du club</h2>
         <p class="section-intro">
-          Une structure pensée pour couvrir à la fois le fond, l’animation, les partenariats et la visibilité du club.
+          Une structure pensée pour couvrir le fond, l’animation, les partenariats et la visibilité du club, avec une montée en puissance progressive.
         </p>
 
         <div class="poles-grid">
@@ -1164,19 +1194,14 @@
             <p>Construire l’identité visuelle du club, porter sa voix et valoriser ses actions avec exigence et cohérence.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🧩</div>
-            <h3>Pôle Ressources Humaines</h3>
-            <p>Faire vivre l’équipe, coordonner les membres et structurer l’engagement au sein du club.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">💻</div>
-            <h3>Pôle SI</h3>
-            <p>Appuyer les besoins techniques et les outils nécessaires au bon fonctionnement de l’association.</p>
-          </div>
-          <div class="card">
             <div class="card-icon">🏛️</div>
             <h3>Bureau</h3>
             <p>Donner l’impulsion, fixer le cap et garantir la cohérence globale des projets portés par AgroParisTech Business & Transitions.</p>
+          </div>
+          <div class="card coming-soon-card">
+            <div class="card-icon">✨</div>
+            <h3>Pôles à venir</h3>
+            <p>À mesure que le club grandira, d’autres pôles pourront émerger pour accompagner son développement et répondre à de nouveaux besoins.</p>
           </div>
         </div>
       </div>
