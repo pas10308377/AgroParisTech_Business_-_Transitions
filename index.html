@@ -6,7 +6,7 @@
   <title>AgroParisTech Business & Transitions</title>
   <meta
     name="description"
-    content="AgroParisTech Business & Transitions — L’ambition verte du business de demain. Club étudiant dédié à la finance, l’entrepreneuriat, l’innovation et les transitions."
+    content="AgroParisTech Business & Transitions — Club étudiant dédié au business, à la finance, à l’entrepreneuriat et aux transitions."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,31 +15,29 @@
 
   <style>
     :root {
-      --bg: #f5f8fb;
-      --bg-soft: #eef4f7;
-      --surface: rgba(255,255,255,0.78);
-      --surface-strong: rgba(255,255,255,0.92);
+      --bg: #f4f8fb;
+      --bg-soft: #edf3f7;
+      --surface: rgba(255,255,255,0.82);
+      --surface-strong: rgba(255,255,255,0.95);
       --text: #132033;
-      --muted: #5e6b7d;
+      --muted: #5d6a7a;
 
-      --blue-950: #0f1d3a;
+      --blue-950: #0d1b37;
       --blue-900: #162a59;
-      --blue-800: #1d3780;
-      --blue-700: #2b47a6;
-      --blue-600: #3d5fca;
+      --blue-800: #203c88;
+      --blue-700: #3558ba;
 
-      --green-900: #006a4b;
-      --green-800: #00885d;
-      --green-700: #00a06a;
-      --green-200: #d9f3e8;
+      --green-900: #035f46;
+      --green-800: #00865d;
+      --green-700: #00a56d;
+      --green-100: #ebfbf3;
 
       --line: rgba(22,42,89,0.10);
       --line-strong: rgba(22,42,89,0.16);
-      --gold: #d3b57a;
 
-      --shadow-sm: 0 12px 28px rgba(16, 28, 52, 0.06);
-      --shadow-md: 0 22px 50px rgba(16, 28, 52, 0.10);
-      --shadow-lg: 0 30px 80px rgba(16, 28, 52, 0.16);
+      --shadow-sm: 0 14px 34px rgba(16, 28, 52, 0.06);
+      --shadow-md: 0 24px 60px rgba(16, 28, 52, 0.10);
+      --shadow-lg: 0 36px 90px rgba(16, 28, 52, 0.16);
 
       --radius-xl: 30px;
       --radius-lg: 22px;
@@ -49,16 +47,17 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: "Inter", Arial, sans-serif;
       color: var(--text);
       line-height: 1.65;
       background:
-        radial-gradient(circle at 10% 15%, rgba(0,160,106,0.08), transparent 24%),
-        radial-gradient(circle at 85% 10%, rgba(29,55,128,0.07), transparent 22%),
-        radial-gradient(circle at 80% 80%, rgba(61,95,202,0.06), transparent 22%),
-        linear-gradient(180deg, #f7fbfd, #f2f7fb 42%, #f8fbfe 100%);
+        radial-gradient(circle at 10% 12%, rgba(0,165,109,0.08), transparent 24%),
+        radial-gradient(circle at 86% 9%, rgba(32,60,136,0.07), transparent 20%),
+        radial-gradient(circle at 82% 82%, rgba(53,88,186,0.05), transparent 20%),
+        linear-gradient(180deg, #f8fbfd 0%, #f2f7fb 40%, #f8fbfd 100%);
       overflow-x: hidden;
     }
 
@@ -68,10 +67,10 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
       background-size: 34px 34px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.16), rgba(0,0,0,0));
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.20), rgba(0,0,0,0));
       z-index: 0;
     }
 
@@ -101,13 +100,13 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 110px 0 80px;
+      padding: 120px 0 90px;
       overflow: hidden;
       color: white;
       background:
-        radial-gradient(circle at 18% 20%, rgba(255,255,255,0.10), transparent 24%),
-        radial-gradient(circle at 80% 18%, rgba(211,181,122,0.12), transparent 20%),
-        linear-gradient(135deg, rgba(15,29,58,0.98), rgba(22,42,89,0.96), rgba(29,55,128,0.92), rgba(0,106,75,0.86));
+        radial-gradient(circle at 18% 16%, rgba(255,255,255,0.08), transparent 24%),
+        radial-gradient(circle at 78% 20%, rgba(255,255,255,0.08), transparent 18%),
+        linear-gradient(135deg, rgba(12,23,47,0.99), rgba(18,37,77,0.97), rgba(21,47,104,0.94), rgba(0,106,75,0.84));
     }
 
     .hero-orb,
@@ -115,18 +114,18 @@
     .hero-orb-3 {
       position: absolute;
       border-radius: 50%;
-      filter: blur(18px);
-      opacity: 0.35;
+      filter: blur(20px);
+      opacity: 0.34;
       pointer-events: none;
       animation: floatBlob 14s ease-in-out infinite;
     }
 
     .hero-orb {
-      width: 420px;
-      height: 420px;
-      top: -120px;
+      width: 440px;
+      height: 440px;
+      top: -150px;
       left: -100px;
-      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 70%);
+      background: radial-gradient(circle, rgba(255,255,255,0.14), transparent 70%);
     }
 
     .hero-orb-2 {
@@ -134,23 +133,23 @@
       height: 520px;
       right: -180px;
       bottom: -180px;
-      background: radial-gradient(circle, rgba(0,160,106,0.28), transparent 70%);
+      background: radial-gradient(circle, rgba(0,165,109,0.22), transparent 70%);
       animation-delay: -4s;
     }
 
     .hero-orb-3 {
-      width: 300px;
-      height: 300px;
+      width: 320px;
+      height: 320px;
+      top: 10%;
       right: 18%;
-      top: 8%;
-      background: radial-gradient(circle, rgba(255,255,255,0.10), transparent 70%);
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
       animation-delay: -7s;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 42px;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 54px;
       align-items: center;
     }
 
@@ -158,14 +157,14 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
       padding: 10px 16px;
       border-radius: 999px;
       background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.14);
       backdrop-filter: blur(12px);
       font-weight: 800;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -182,40 +181,42 @@
     .hero-logo-wrap {
       display: flex;
       align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
+      gap: 24px;
+      margin-bottom: 28px;
     }
 
     .hero-logo {
-      width: 120px;
-      height: 120px;
+      width: 148px;
+      height: 148px;
       object-fit: contain;
-      border-radius: 26px;
-      padding: 14px;
-      background: rgba(255,255,255,0.96);
+      border-radius: 28px;
+      padding: 16px;
+      background: #ffffff;
       border: 1px solid rgba(255,255,255,0.95);
-      box-shadow: 0 18px 36px rgba(0,0,0,0.14);
+      box-shadow: 0 22px 48px rgba(0,0,0,0.16);
+      flex-shrink: 0;
     }
 
     .hero-brand {
       font-weight: 900;
-      font-size: 1.05rem;
-      line-height: 1.2;
+      font-size: 1.08rem;
+      line-height: 1.25;
       letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.95);
     }
 
     header h1 {
       margin: 0 0 18px;
       font-family: "Manrope", "Inter", sans-serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      line-height: 0.98;
-      letter-spacing: -0.05em;
+      font-size: clamp(3.1rem, 6vw, 5.7rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
       font-weight: 800;
       text-wrap: balance;
     }
 
     .hero-highlight {
-      background: linear-gradient(135deg, #dffff0, #7ff0b8);
+      background: linear-gradient(135deg, #effff7, #8df3bf);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -224,7 +225,7 @@
       margin: 0;
       max-width: 760px;
       font-size: 1.12rem;
-      color: rgba(255,255,255,0.92);
+      color: rgba(255,255,255,0.90);
       text-wrap: balance;
     }
 
@@ -232,7 +233,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .hero-badge {
@@ -241,7 +242,7 @@
       background: rgba(255,255,255,0.10);
       border: 1px solid rgba(255,255,255,0.14);
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       backdrop-filter: blur(10px);
     }
 
@@ -284,23 +285,23 @@
     .hero-panel {
       position: relative;
       overflow: hidden;
-      padding: 30px;
+      padding: 34px;
       border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
+      background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.07));
       border: 1px solid rgba(255,255,255,0.14);
-      backdrop-filter: blur(16px);
-      box-shadow: 0 24px 70px rgba(0,0,0,0.12);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 28px 80px rgba(0,0,0,0.13);
     }
 
     .hero-panel::after {
       content: "";
       position: absolute;
-      width: 240px;
-      height: 240px;
-      right: -90px;
-      top: -90px;
+      width: 260px;
+      height: 260px;
+      right: -110px;
+      top: -110px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 70%);
+      background: radial-gradient(circle, rgba(255,255,255,0.13), transparent 70%);
     }
 
     .panel-label {
@@ -319,50 +320,59 @@
     .panel-title {
       margin: 0 0 12px;
       font-family: "Manrope", sans-serif;
-      font-size: 1.95rem;
-      line-height: 1.08;
+      font-size: 2rem;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
     }
 
     .panel-text {
       margin: 0 0 22px;
-      color: rgba(255,255,255,0.88);
+      color: rgba(255,255,255,0.86);
       font-size: 1rem;
     }
 
-    .hero-panel-footer {
-      margin-top: 16px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.84);
-      font-size: 0.95rem;
-      font-weight: 600;
+    .panel-separator {
+      width: 100%;
+      height: 1px;
+      background: rgba(255,255,255,0.12);
+      margin: 22px 0;
     }
 
-    .hero-metrics {
+    .panel-points {
       display: grid;
-      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 16px;
+    }
+
+    .panel-point {
+      display: grid;
+      grid-template-columns: 50px 1fr;
       gap: 14px;
-      margin-top: 18px;
+      align-items: start;
     }
 
-    .metric {
-      padding: 18px;
-      border-radius: 18px;
+    .panel-point-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: rgba(255,255,255,0.10);
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.10);
+      font-size: 1.1rem;
     }
 
-    .metric strong {
+    .panel-point strong {
       display: block;
-      margin-bottom: 6px;
-      font-size: 1.45rem;
-      font-weight: 900;
+      margin-bottom: 4px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: white;
     }
 
-    .metric span {
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.84);
-      font-weight: 600;
+    .panel-point span {
+      color: rgba(255,255,255,0.80);
+      font-size: 0.96rem;
     }
 
     nav {
@@ -378,8 +388,8 @@
       margin: 0 auto;
       padding: 12px;
       border-radius: 20px;
-      background: rgba(255,255,255,0.62);
-      border: 1px solid rgba(255,255,255,0.65);
+      background: rgba(255,255,255,0.64);
+      border: 1px solid rgba(255,255,255,0.66);
       backdrop-filter: blur(18px);
       box-shadow: 0 18px 40px rgba(16,28,52,0.08);
     }
@@ -397,7 +407,7 @@
       border-radius: 12px;
       color: var(--blue-900);
       font-weight: 800;
-      transition: background 0.25s ease, transform 0.25s ease, color 0.25s ease;
+      transition: background 0.25s ease, transform 0.25s ease;
     }
 
     nav a:hover,
@@ -416,7 +426,7 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 28px;
-      padding: 38px;
+      padding: 40px;
       border-radius: var(--radius-xl);
       background: var(--surface);
       border: 1px solid rgba(255,255,255,0.65);
@@ -460,10 +470,10 @@
     h2 {
       margin: 0 0 14px;
       font-family: "Manrope", "Inter", sans-serif;
-      font-size: 2.15rem;
-      line-height: 1.08;
+      font-size: 2.2rem;
+      line-height: 1.06;
       color: var(--blue-900);
-      letter-spacing: -0.04em;
+      letter-spacing: -0.045em;
     }
 
     .section-intro {
@@ -475,7 +485,7 @@
 
     .grid-2 {
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      grid-template-columns: 1.04fr 0.96fr;
       gap: 24px;
       align-items: stretch;
     }
@@ -490,21 +500,22 @@
       margin-top: 22px;
     }
 
-    .mini-grid { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+    .mini-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
     .grid { grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); }
-    .contact-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .poles-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-    .activities-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .contact-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .poles-grid { grid-template-columns: repeat(auto-fit, minmax(235px, 1fr)); }
+    .activities-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     .card,
     .mini-stat,
     .info-box,
     .feature-box,
-    .contact-card {
+    .contact-card,
+    .activity-card {
       position: relative;
       overflow: hidden;
-      padding: 24px;
-      border-radius: 22px;
+      padding: 26px;
+      border-radius: 24px;
       background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(245,249,252,0.96));
       border: 1px solid var(--line);
       box-shadow: var(--shadow-sm);
@@ -515,7 +526,8 @@
     .mini-stat:hover,
     .info-box:hover,
     .feature-box:hover,
-    .contact-card:hover {
+    .contact-card:hover,
+    .activity-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 22px 42px rgba(16,28,52,0.10);
       border-color: var(--line-strong);
@@ -523,7 +535,8 @@
 
     .card::before,
     .feature-box::before,
-    .contact-card::before {
+    .contact-card::before,
+    .activity-card::before {
       content: "";
       position: absolute;
       inset: 0 0 auto 0;
@@ -531,25 +544,16 @@
       background: linear-gradient(90deg, var(--green-700), var(--blue-700));
     }
 
-    .activities-grid .card:first-child {
-      grid-column: span 2;
-      background: linear-gradient(135deg, rgba(0,160,106,0.08), rgba(29,55,128,0.08), rgba(255,255,255,0.96));
-    }
-
-    .coming-soon-card {
-      background: linear-gradient(135deg, rgba(22,42,89,0.06), rgba(0,160,106,0.06), rgba(255,255,255,0.98));
-      border-style: dashed;
-    }
-
     .card-icon,
-    .box-icon {
+    .box-icon,
+    .activity-icon {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 52px;
-      height: 52px;
+      width: 54px;
+      height: 54px;
       margin-bottom: 14px;
-      border-radius: 14px;
+      border-radius: 15px;
       background: linear-gradient(135deg, rgba(0,160,106,0.10), rgba(29,55,128,0.12));
       font-size: 1.35rem;
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
@@ -558,17 +562,20 @@
     .card h3,
     .feature-box h3,
     .contact-card h3,
-    .info-box h3 {
+    .info-box h3,
+    .activity-card h3 {
       margin: 4px 0 10px;
       color: var(--blue-900);
-      font-size: 1.16rem;
+      font-size: 1.14rem;
+      line-height: 1.25;
     }
 
     .card p,
     .feature-box p,
     .contact-card p,
     .info-box p,
-    .mini-stat span {
+    .mini-stat span,
+    .activity-card p {
       color: var(--muted);
     }
 
@@ -583,7 +590,7 @@
     .statement {
       position: relative;
       overflow: hidden;
-      padding: 24px;
+      padding: 26px;
       border-radius: 24px;
       background: linear-gradient(135deg, rgba(0,160,106,0.10), rgba(29,55,128,0.08));
       border: 1px solid rgba(22,42,89,0.08);
@@ -598,16 +605,24 @@
       height: 100%;
     }
 
-    .feature-box strong {
-      color: var(--green-900);
-      font-weight: 800;
-      display: inline-block;
-      margin-bottom: 6px;
+    .quote-block {
+      padding: 26px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(243,248,252,0.96));
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quote-block p {
+      margin: 0;
+      font-size: 1.04rem;
+      color: var(--blue-900);
+      font-weight: 700;
     }
 
     .flagship {
       background:
-        linear-gradient(135deg, rgba(13, 29, 58, 0.98), rgba(20, 43, 92, 0.96), rgba(0, 106, 75, 0.90));
+        linear-gradient(135deg, rgba(13,29,58,0.985), rgba(18,39,85,0.965), rgba(0,96,68,0.90));
       color: white;
       border: 1px solid rgba(255,255,255,0.08);
       box-shadow: var(--shadow-lg);
@@ -629,18 +644,18 @@
     .flagship .section-intro,
     .flagship p,
     .flagship li,
-    .flagship .mini-stat span { color: rgba(255,255,255,0.88); }
+    .flagship span { color: rgba(255,255,255,0.88); }
 
     .flagship-shell {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.03fr 0.97fr;
       gap: 24px;
       align-items: stretch;
     }
 
     .flagship-panel,
     .flagship-highlight {
-      padding: 26px;
+      padding: 28px;
       border-radius: 24px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
@@ -649,13 +664,13 @@
 
     .flagship-stats {
       display: grid;
-      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 24px;
     }
 
     .flagship-stat {
-      padding: 16px;
+      padding: 18px;
       border-radius: 18px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.10);
@@ -664,8 +679,9 @@
     .flagship-stat strong {
       display: block;
       margin-bottom: 6px;
-      font-size: 1.5rem;
+      font-size: 1.55rem;
       font-weight: 900;
+      color: white;
     }
 
     .flagship-list {
@@ -677,7 +693,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .pill {
@@ -689,22 +705,47 @@
       font-size: 0.92rem;
     }
 
-    .poles-grid .card,
-    .activities-grid .card { min-height: 100%; }
+    .activities-showcase {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 22px;
+    }
 
-    .quote-block {
-      padding: 24px;
-      border-radius: 24px;
+    .activities-aside {
+      padding: 30px;
+      border-radius: 26px;
       background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(243,248,252,0.96));
       border: 1px solid var(--line);
       box-shadow: var(--shadow-sm);
     }
 
-    .quote-block p {
-      margin: 0;
-      font-size: 1.04rem;
+    .activities-aside h3 {
+      margin: 0 0 12px;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.55rem;
       color: var(--blue-900);
+      line-height: 1.1;
+    }
+
+    .activities-aside p {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+
+    .activities-note {
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(0,160,106,0.09), rgba(29,55,128,0.07));
+      border: 1px solid rgba(22,42,89,0.08);
+      color: var(--blue-950);
       font-weight: 700;
+    }
+
+    .coming-soon-card {
+      background: linear-gradient(135deg, rgba(22,42,89,0.05), rgba(0,160,106,0.05), rgba(255,255,255,0.98));
+      border-style: dashed;
     }
 
     .social-links {
@@ -763,16 +804,16 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 980px) {
+    @media (max-width: 1024px) {
       .hero-grid,
       .grid-2,
       .flagship-shell,
-      .activities-grid {
+      .activities-showcase {
         grid-template-columns: 1fr;
       }
 
-      .activities-grid .card:first-child {
-        grid-column: span 1;
+      .flagship-stats {
+        grid-template-columns: 1fr 1fr 1fr;
       }
 
       header {
@@ -813,7 +854,7 @@
       }
 
       h2 {
-        font-size: 1.78rem;
+        font-size: 1.82rem;
       }
 
       .hero-logo-wrap {
@@ -821,14 +862,29 @@
       }
 
       .hero-logo {
-        width: 96px;
-        height: 96px;
+        width: 112px;
+        height: 112px;
+      }
+
+      .activities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flagship-stats {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 560px) {
-      .hero-metrics,
-      .flagship-stats {
+      .hero-logo-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .mini-grid,
+      .grid,
+      .contact-grid,
+      .poles-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -863,7 +919,7 @@
           <img class="hero-logo" src="logo_APT_business&Transitions.png" alt="Logo AgroParisTech Business & Transitions" />
           <div class="hero-brand">
             AgroParisTech<br>
-            Business et Transitions
+            Business & Transitions
           </div>
         </div>
 
@@ -873,51 +929,56 @@
         </h1>
 
         <p class="hero-subtitle">
-          Un club qui connecte business, finance, entrepreneuriat et innovation avec les grands enjeux de transition écologique,
-          d’impact et de responsabilité.
+          Une association étudiante qui crée des passerelles entre business, finance, entrepreneuriat, innovation
+          et grands enjeux de transition.
         </p>
 
         <div class="hero-badges">
-          <span class="hero-badge">Finance & investissement</span>
+          <span class="hero-badge">Finance & stratégie</span>
           <span class="hero-badge">Entrepreneuriat & innovation</span>
           <span class="hero-badge">Transitions & impact</span>
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#hackathon">Découvrir notre projet phare</a>
+          <a class="btn btn-primary" href="#hackathon">Découvrir le hackathon</a>
           <a class="btn btn-secondary" href="#contact">Nous contacter</a>
         </div>
       </div>
 
       <div class="hero-panel">
-        <span class="panel-label">Projet signature</span>
-        <h2 class="panel-title">Hackathon Youth for Bioeconomy</h2>
+        <span class="panel-label">Le club</span>
+        <h2 class="panel-title">Un espace d’ouverture, d’exigence et d’initiative</h2>
         <p class="panel-text">
-          Le projet phare du club : un hackathon étudiant ambitieux pour faire émerger des solutions concrètes autour de la bioéconomie,
-          de l’innovation et des transitions.
+          AgroParisTech Business & Transitions veut faire dialoguer excellence académique, culture du projet
+          et compréhension des grands enjeux économiques et écologiques contemporains.
         </p>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <strong>24h</strong>
-            <span>d’innovation et de collaboration</span>
-          </div>
-          <div class="metric">
-            <strong>50+</strong>
-            <span>participants visés</span>
-          </div>
-          <div class="metric">
-            <strong>3</strong>
-            <span>grandes thématiques de défis</span>
-          </div>
-          <div class="metric">
-            <strong>5</strong>
-            <span>pôles actifs au lancement</span>
-          </div>
-        </div>
+        <div class="panel-separator"></div>
 
-        <div class="hero-panel-footer">
-          Un projet structurant qui incarne l’ADN du club : ambition, interdisciplinarité, impact et ouverture vers l’extérieur.
+        <div class="panel-points">
+          <div class="panel-point">
+            <div class="panel-point-icon">🌍</div>
+            <div>
+              <strong>Vision</strong>
+              <span>Former des étudiants capables de relier business, impact et responsabilité.</span>
+            </div>
+          </div>
+
+          <div class="panel-point">
+            <div class="panel-point-icon">🤝</div>
+            <div>
+              <strong>Passerelles</strong>
+              <span>Créer des liens concrets entre étudiants, alumni, chercheurs, entreprises et écosystèmes.</span>
+            </div>
+          </div>
+
+          <div class="panel-point">
+            <div class="panel-point-icon">🚀</div>
+            <div>
+              <strong>Action</strong>
+              <span>Porter des formats utiles, ambitieux et professionnalisants, du talk au projet structurant.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -941,15 +1002,16 @@
     <section id="club" class="reveal">
       <div class="reveal-children">
         <span class="eyebrow">Présentation</span>
-        <h2>Un club à l’intersection du business, de la finance et des transitions</h2>
+        <h2>À l’intersection du business, de la finance et des transitions</h2>
         <p class="section-intro">
           AgroParisTech Business & Transitions a pour vocation de promouvoir l’intérêt des étudiants pour la finance,
-          l’entrepreneuriat et l’économie, en intégrant les enjeux de transition écologique et de responsabilité sociétale.
+          l’entrepreneuriat, l’économie et l’innovation, en intégrant pleinement les enjeux de transition écologique
+          et de responsabilité.
         </p>
 
         <div class="statement">
-          Le club s’inscrit dans un esprit d’ouverture, d’indépendance et de rigueur intellectuelle, dans le respect des valeurs
-          de l’enseignement supérieur public et de l’ADN d’AgroParisTech.
+          Le club s’inscrit dans un esprit d’ouverture, d’indépendance et de rigueur intellectuelle,
+          en cohérence avec les valeurs de l’enseignement supérieur public et l’ADN d’AgroParisTech.
         </div>
 
         <div class="mini-grid">
@@ -963,11 +1025,11 @@
           </div>
           <div class="mini-stat">
             <strong>Passerelles</strong>
-            <span>Créer des liens concrets entre étudiants, alumni, enseignants, chercheurs et entreprises.</span>
+            <span>Créer des liens concrets entre les étudiants et les mondes académique, professionnel et entrepreneurial.</span>
           </div>
           <div class="mini-stat">
             <strong>Action</strong>
-            <span>Transformer les idées en initiatives, événements, rencontres et projets porteurs de sens.</span>
+            <span>Transformer les idées en événements, rencontres et initiatives utiles, visibles et porteuses de sens.</span>
           </div>
         </div>
       </div>
@@ -992,8 +1054,8 @@
             </div>
             <div class="feature-box">
               <div class="box-icon">🤝</div>
-              <h3>Rencontrer</h3>
-              <p>Créer des passerelles concrètes entre le monde académique et les professionnels de la finance, de l’entrepreneuriat et de la transition.</p>
+              <h3>Connecter</h3>
+              <p>Créer des passerelles concrètes entre monde académique, alumni, entreprises, finance, entrepreneuriat et transition.</p>
             </div>
           </div>
 
@@ -1001,17 +1063,17 @@
             <div class="feature-box">
               <div class="box-icon">🎙️</div>
               <h3>Organiser</h3>
-              <p>Proposer des conférences, ateliers, concours, tables rondes, visites d’entreprises, rencontres et simulations pour apprendre de façon concrète.</p>
+              <p>Proposer des conférences, ateliers, rencontres, concours, visites et formats immersifs pour apprendre de façon concrète.</p>
             </div>
             <div class="feature-box">
               <div class="box-icon">🧠</div>
-              <h3>Créer</h3>
-              <p>Faire vivre un espace collaboratif de réflexion et d’apprentissage autour du business, de la finance et des transitions.</p>
+              <h3>Structurer</h3>
+              <p>Faire vivre un espace de réflexion, d’apprentissage et de professionnalisation autour du business et des transitions.</p>
             </div>
             <div class="quote-block">
               <p>
-                Notre ambition : former une communauté étudiante curieuse, structurée et engagée, capable de relier excellence académique,
-                esprit d’initiative et transitions durables.
+                Notre ambition : faire émerger une communauté étudiante curieuse, solide et engagée,
+                capable de relier excellence académique, esprit d’initiative et transitions durables.
               </p>
             </div>
           </div>
@@ -1030,11 +1092,11 @@
 
         <div class="flagship-shell">
           <div class="flagship-panel">
-            <h3>Pourquoi c’est notre plus grand projet</h3>
+            <h3>Un événement structurant et visible</h3>
             <p>
-              Cet événement concentre l’ADN du club : transversalité, ambition, travail en équipe, ouverture aux partenaires, esprit entrepreneurial
-              et recherche de solutions utiles. Il donne une visibilité forte à AgroParisTech Business & Transitions et crée un point de rencontre
-              entre étudiants, mentors, experts et acteurs engagés.
+              Ce hackathon concentre l’ADN du club : ambition, transversalité, travail en équipe, esprit entrepreneurial
+              et recherche de solutions concrètes. Il donne une visibilité forte à l’association et crée un point de rencontre
+              entre étudiants, mentors, experts et partenaires.
             </p>
 
             <div class="flagship-stats">
@@ -1044,15 +1106,11 @@
               </div>
               <div class="flagship-stat">
                 <strong>3</strong>
-                <span>grandes thématiques de défis</span>
+                <span>grandes thématiques</span>
               </div>
               <div class="flagship-stat">
                 <strong>50+</strong>
                 <span>participants visés</span>
-              </div>
-              <div class="flagship-stat">
-                <strong>1</strong>
-                <span>vitrine forte du club</span>
               </div>
             </div>
           </div>
@@ -1085,45 +1143,46 @@
     <section id="activites" class="reveal">
       <div class="reveal-children">
         <span class="eyebrow">Activités</span>
-        <h2>Des formats concrets, professionnalisants et vivants</h2>
+        <h2>Des formats concrets, élégants et professionnalisants</h2>
         <p class="section-intro">
-          Le club propose une palette d’activités pour permettre aux étudiants de découvrir, approfondir et expérimenter le business,
-          la finance, l’innovation et l’entrepreneuriat à impact.
+          Le club propose des formats complémentaires pour permettre aux étudiants de découvrir, approfondir
+          et expérimenter le business, la finance, l’innovation et l’entrepreneuriat à impact.
         </p>
 
-        <div class="activities-grid">
-          <div class="card">
-            <div class="card-icon">💡</div>
-            <h3>Hackathons, concours & temps forts</h3>
+        <div class="activities-showcase">
+          <div class="activities-aside">
+            <h3>Une programmation pensée pour apprendre, rencontrer et construire</h3>
             <p>
-              Des formats emblématiques pour concevoir, challenger et défendre des idées à fort potentiel. Ces événements incarnent
-              l’ambition du club et donnent une dimension concrète, collective et visible à nos actions.
+              Les activités du club sont conçues comme un ensemble cohérent : inspiration, montée en compétence,
+              ouverture au réel et passage à l’action.
             </p>
+            <div class="activities-note">
+              L’objectif n’est pas seulement de parler du business de demain, mais d’en donner une expérience concrète,
+              exigeante et stimulante.
+            </div>
           </div>
-          <div class="card">
-            <div class="card-icon">🎤</div>
-            <h3>Conférences</h3>
-            <p>Interventions d’experts, d’alumni, de dirigeants ou d’acteurs engagés sur les grandes transformations économiques et environnementales.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🛠️</div>
-            <h3>Ateliers</h3>
-            <p>Formats pratiques sur le pitch, le business model, l’investissement, l’innovation, l’impact ou la structuration de projet.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🏢</div>
-            <h3>Visites</h3>
-            <p>Découvertes de startups, d’entreprises et d’écosystèmes pour connecter les apprentissages au terrain.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🎓</div>
-            <h3>Mini-formations</h3>
-            <p>Contenus accessibles pour acquérir des bases communes, structurer les connaissances et monter en compétence au sein du club.</p>
-          </div>
-          <div class="card">
-            <div class="card-icon">🎙️</div>
-            <h3>Rencontres & contenus</h3>
-            <p>Formats inspirants pour donner la parole à des profils variés et rendre visibles des trajectoires professionnelles engagées.</p>
+
+          <div class="activities-grid">
+            <div class="activity-card">
+              <div class="activity-icon">🎤</div>
+              <h3>Conférences & tables rondes</h3>
+              <p>Interventions d’experts, d’alumni, de dirigeants ou d’acteurs engagés sur les grandes transformations économiques et environnementales.</p>
+            </div>
+            <div class="activity-card">
+              <div class="activity-icon">🛠️</div>
+              <h3>Ateliers pratiques</h3>
+              <p>Formats concrets autour du pitch, du business model, de l’investissement, de l’innovation, de l’impact ou de la structuration de projet.</p>
+            </div>
+            <div class="activity-card">
+              <div class="activity-icon">💡</div>
+              <h3>Hackathons & concours</h3>
+              <p>Des expériences collectives pour concevoir, challenger et défendre des idées à fort potentiel dans un cadre stimulant.</p>
+            </div>
+            <div class="activity-card">
+              <div class="activity-icon">🏢</div>
+              <h3>Visites & immersions</h3>
+              <p>Découvertes de startups, d’entreprises et d’écosystèmes afin de connecter les apprentissages au terrain et aux réalités du secteur.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -1134,18 +1193,20 @@
         <span class="eyebrow">Entrepreneuriat & Innovation</span>
         <h2>Un pôle pour faire émerger des projets</h2>
         <p class="section-intro">
-          Le pôle Entrepreneuriat & Innovation accompagne les étudiants porteurs d’idées ou de projets, mais s’adresse aussi à celles et ceux
-          qui veulent découvrir l’univers entrepreneurial, s’y former et gagner en confiance.
+          Le pôle Entrepreneuriat & Innovation accompagne les étudiants porteurs d’idées ou de projets,
+          mais s’adresse aussi à celles et ceux qui veulent découvrir l’univers entrepreneurial, s’y former et gagner en confiance.
         </p>
 
         <div class="grid-2">
           <div class="info-box">
             <h3>Sa vocation</h3>
             <p>
-              Encourager une innovation responsable, soucieuse des enjeux sociaux et environnementaux, en cohérence avec les valeurs d’AgroParisTech.
+              Encourager une innovation responsable, soucieuse des enjeux sociaux et environnementaux,
+              en cohérence avec les valeurs d’AgroParisTech.
             </p>
             <p>
-              Le pôle met l’accent sur l’impact positif, les transitions durables et l’accompagnement progressif des étudiants qui souhaitent transformer une idée en projet.
+              Le pôle met l’accent sur l’impact positif, les transitions durables et l’accompagnement progressif
+              des étudiants qui souhaitent transformer une idée en projet.
             </p>
           </div>
           <div class="info-box">
@@ -1158,8 +1219,8 @@
         </div>
 
         <div class="statement">
-          Le club souhaite aussi créer une passerelle forte avec l’itinéraire Entrepreneuriat, afin de faciliter les échanges, mutualiser les ressources
-          et imaginer des événements communs au service de la dynamique entrepreneuriale de l’école.
+          Le club souhaite également créer une passerelle forte avec l’itinéraire Entrepreneuriat,
+          afin de faciliter les échanges, mutualiser les ressources et imaginer des événements communs au service de la dynamique de l’école.
         </div>
       </div>
     </section>
@@ -1169,7 +1230,8 @@
         <span class="eyebrow">Organisation</span>
         <h2>Les pôles du club</h2>
         <p class="section-intro">
-          Une structure pensée pour couvrir le fond, l’animation, les partenariats et la visibilité du club, avec une montée en puissance progressive.
+          Une organisation volontairement claire et progressive, pensée pour couvrir le fond, la dynamique collective,
+          les partenariats et la visibilité du club.
         </p>
 
         <div class="poles-grid">
@@ -1191,7 +1253,7 @@
           <div class="card">
             <div class="card-icon">🎨</div>
             <h3>Pôle Communication & Design</h3>
-            <p>Construire l’identité visuelle du club, porter sa voix et valoriser ses actions avec exigence et cohérence.</p>
+            <p>Construire l’identité visuelle du club, porter sa voix et valoriser ses actions avec cohérence, exigence et élégance.</p>
           </div>
           <div class="card">
             <div class="card-icon">🏛️</div>
@@ -1201,7 +1263,7 @@
           <div class="card coming-soon-card">
             <div class="card-icon">✨</div>
             <h3>Pôles à venir</h3>
-            <p>À mesure que le club grandira, d’autres pôles pourront émerger pour accompagner son développement et répondre à de nouveaux besoins.</p>
+            <p>À mesure que l’association grandira, d’autres pôles pourront émerger pour accompagner son développement et structurer de nouveaux besoins.</p>
           </div>
         </div>
       </div>
@@ -1213,7 +1275,7 @@
         <h2>Des partenariats pour ancrer les projets dans le réel</h2>
         <p class="section-intro">
           Le club souhaite développer des collaborations avec des acteurs clés de l’écosystème AgroParisTech et au-delà,
-          pour favoriser la mise en application des projets, bénéficier de conseils avisés et mobiliser des ressources utiles.
+          afin de favoriser la mise en application des projets, bénéficier de conseils avisés et mobiliser des ressources utiles.
         </p>
 
         <div class="grid">
@@ -1230,13 +1292,13 @@
           <div class="card">
             <div class="card-icon">🏢</div>
             <h3>Entreprises & écosystèmes</h3>
-            <p>Apporter du soutien, proposer des interventions, des ateliers pratiques, des retours d’expérience et ouvrir des opportunités.</p>
+            <p>Apporter du soutien, proposer des interventions, des ateliers, des retours d’expérience et ouvrir des opportunités concrètes.</p>
           </div>
         </div>
 
         <div class="statement">
           Côté entrepreneuriat à impact, le club vise des structures reconnues ou émergentes portant des initiatives écologiques et durables,
-          dans des univers proches de l’innovation responsable, des mobilités, de la santé, de l’agroalimentaire ou de la tech à impact.
+          dans des univers proches de l’innovation responsable, de l’agroalimentaire, de la santé, de la mobilité ou de la tech à impact.
         </div>
       </div>
     </section>
@@ -1263,7 +1325,7 @@
           <div class="contact-card">
             <div class="card-icon">💼</div>
             <h3>LinkedIn</h3>
-            <p>Pour valoriser la dimension plus institutionnelle, professionnelle et partenariale du club.</p>
+            <p>Pour valoriser la dimension institutionnelle, professionnelle et partenariale du club.</p>
             <div class="social-links">
               <a class="social-link" href="https://www.linkedin.com/in/agroparistech-business-et-transitions-346784394/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BCtg01EqQQCWcgIfyfqlu%2Bg%3D%3D" target="_blank" rel="noopener noreferrer">Voir notre LinkedIn</a>
             </div>
